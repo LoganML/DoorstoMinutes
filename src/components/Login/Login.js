@@ -1,20 +1,47 @@
-import React from 'react';
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import React, { Component } from 'react';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import AppBar from 'material-ui/AppBar';
+import RaisedButton from 'material-ui/RaisedButton';
+import TextField from 'material-ui/TextField';
 
-export default class Example extends React.Component {
+
+class Login extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: '',
+      password: ''
+    }
+  }
   render() {
     return (
-      <Form inline>
-        <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-          <Label for="exampleEmail" className="mr-sm-2">Email</Label>
-          <Input type="email" name="email" id="exampleEmail" placeholder="something@idk.cool" />
-        </FormGroup>
-        <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-          <Label for="examplePassword" className="mr-sm-2">Password</Label>
-          <Input type="password" name="password" id="examplePassword" placeholder="don't tell!" />
-        </FormGroup>
-        <Button>Submit</Button>
-      </Form>
+      <div>
+        <MuiThemeProvider>
+          <div>
+            <AppBar
+              title="Login"
+            />
+            <TextField
+              hintText="Enter your Username"
+              floatingLabelText="Username"
+              onChange={(event, newValue) => this.setState({ username: newValue })}
+            />
+            <br />
+            <TextField
+              type="password"
+              hintText="Enter your Password"
+              floatingLabelText="Password"
+              onChange={(event, newValue) => this.setState({ password: newValue })}
+            />
+            <br />
+            <RaisedButton label="Submit" primary={true} style={style} onClick={(event) => this.handleClick(event)} />
+          </div>
+        </MuiThemeProvider>
+      </div>
     );
   }
 }
+const style = {
+  margin: 15,
+};
+export default Login;
