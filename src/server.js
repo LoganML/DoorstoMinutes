@@ -1,4 +1,19 @@
                     // THIS IS MONGODB STUFF AD
+                    //7/15/18
+db = connect('127.0.0.1:27017/mDB') 
+
+    function insertData(myObject){
+        db.names.insert(myObject)
+    }
+
+    function getDataBack() {
+        var cursor = db.names.find();
+        while(cursor.hasNext()){
+            printjson(cursor.next());
+        }
+    }
+                    //7/15/18
+                    
 // import { 
 //     Stitch,
 //     RemoteMongoClient,
