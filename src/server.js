@@ -1,4 +1,26 @@
                     // THIS IS MONGODB STUFF AD
+
+                    //7/15/18
+db = connect('127.0.0.1:27017/mDB') 
+
+    function insertData(myObject){
+        db.names.insert(myObject)
+    }
+
+    function getDataBack() {
+        var cursor = db.names.find();
+        while(cursor.hasNext()){
+            printjson(cursor.next());
+        }
+    }
+                    //7/15/18
+                    
+// import { 
+//     Stitch,
+//     RemoteMongoClient,
+//     AnonymousCredential
+// } from "mongodb-stitch-browser-sdk";
+
 var express = require("express");
 var bodyParser = require("body-parser");
 var request = require("request");
@@ -8,6 +30,7 @@ var cheerio = require("cheerio");
 var path = require("path");
 var app = express();
 var PORT = process.env.PORT || 4000;
+
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
