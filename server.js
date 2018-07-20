@@ -17,7 +17,14 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("./public"));
 
 // 7/15/18
-// db = connect(process.env.mongo)
+
+newData = ObjectId()
+
+ObjectID.valueof()
+
+// getting-started.js
+var mongoose = require('mongoose');
+mongoose.connect(process.env.mongodb);
 
 // function insertData(myObject) {
 //     db.names.insert(myObject)
@@ -29,10 +36,6 @@ app.use(express.static("./public"));
 //         printjson(cursor.next());
 //     }
 // }
-
-// getting-started.js
-var mongoose = require('mongoose');
-mongoose.connect(process.env.mongodb);
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
