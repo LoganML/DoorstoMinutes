@@ -16,19 +16,20 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static("./public"));
   
+
                     // 7/15/18
-db = connect(process.env.mongo) 
+// db = connect(process.env.mongo) 
 
-    function insertData(myObject){
-        db.names.insert(myObject)
-    }
+//     function insertData(myObject){
+//         db.names.insert(myObject)
+//     }
 
-    function getDataBack() {
-        var cursor = db.names.find();
-        while(cursor.hasNext()){
-            printjson(cursor.next());
-        }
-    }
+//     function getDataBack() {
+//         var cursor = db.names.find();
+//         while(cursor.hasNext()){
+//             printjson(cursor.next());
+//         }
+//     }
                     
 // import { 
 //     Stitch,
