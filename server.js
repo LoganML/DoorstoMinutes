@@ -16,7 +16,6 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static("./public"));
 
-
 // 7/15/18
 // db = connect(process.env.mongo)
 
