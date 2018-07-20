@@ -5,7 +5,12 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "@instructure/ui-buttons": "^5.19.0",
+    "@instructure/ui-elements": "^5.19.0",
+    "@instructure/ui-forms": "^5.19.0",
+    "@instructure/ui-themeable": "^5.19.0",
+    "@instructure/ui-themes": "^5.19.0"
   },
   "author": "",
   "license": "ISC",
