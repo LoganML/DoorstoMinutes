@@ -18,14 +18,18 @@ app.use(express.static("./public"));
 
 // 7/15/18
 
-newData = ObjectId()
-
-ObjectID.valueof()
-
 // getting-started.js
 var mongoose = require('mongoose');
 mongoose.connect(process.env.mongodb);
 
+//new
+mongoose.model('data', {String});
+
+app.get('/data', function(req, res){
+    mongoose.model('data').find(function(err, data){
+        res.send(data);
+    })
+})
 // function insertData(myObject) {
 //     db.names.insert(myObject)
 // }
