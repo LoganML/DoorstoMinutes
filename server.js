@@ -16,7 +16,6 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static("./public"));
 
-// 7/15/18
 
 // getting-started.js
 var mongoose = require('mongoose');
@@ -24,6 +23,7 @@ mongoose.connect(process.env.mongodb);
 
 //new
 mongoose.model('data', {String});
+
 
 app.get('/data', function(req, res){
     mongoose.model('data').find(function(err, data){
@@ -72,9 +72,10 @@ datastuff.save(function (err, datastuff) {
     datastuff.speak();
 });
 
-Data.find(function (err, data) {
-    if (err) return console.error(err);
-    console.log(data);
+
+app.get('/data', function(req, res){
+    mongoose.model('data').find(function(err, data){
+        res.send(data);
+    })
 })
 
-Data.find({ name: /^data/ }, callback);

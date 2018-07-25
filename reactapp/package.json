@@ -11,6 +11,7 @@
     "mongoose": "^5.2.4",
     "morgan": "^1.9.0",
     "react": "^16.4.1",
+    "react-daterange-picker": "github:wojtekmaj/react-daterange-picker",
     "react-dom": "^16.4.1",
     "react-scripts": "1.1.4",
     "request": "^2.87.0"

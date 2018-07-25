@@ -1,3 +1,4 @@
+
 var mongoose = require('mongoose')
 
 var ProfileSchema = new mongoose.Schema({
@@ -9,3 +10,4 @@ var ProfileSchema = new mongoose.Schema({
 })
 
 module.exports = mongoose.model('ProfileSchema', ProfileSchema)
+

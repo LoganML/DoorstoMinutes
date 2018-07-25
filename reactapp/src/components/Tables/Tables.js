@@ -6,12 +6,27 @@ import Heading from "@instructure/ui-elements/lib/components/Heading";
 import Progress from "@instructure/ui-elements/lib/components/Progress";
 import Text from "@instructure/ui-elements/lib/components/Text";
 import Button from "@instructure/ui-buttons/lib/components/Button";
+//Austin Date Range 7/25/18
+import DateRangePicker from 'react-daterange-picker';
+
 
 class App extends Component {
+  // 1st change austin new 7/25/18
+  state = {
+    date: [new Date(), new Date()],
+  }
+  onChange = date => this.setState({ date })
+  // 1st change austin new 7/25/18
     render() {
       return (
-        <div className="week1">
-          <Heading>Week July 23rd - 27th</Heading>
+        //2nd change austin new 7/25/18
+        <div>
+        <DateRangePicker
+          onChange={this.onChange}
+          value={this.state.date}
+        />
+
+  
           <Table>
             <thead>
               <tr>
