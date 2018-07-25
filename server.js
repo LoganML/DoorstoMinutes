@@ -25,6 +25,7 @@ mongoose.connect(process.env.mongodb);
 mongoose.model('data', {String});
 
 
+
 app.get('/data', function(req, res){
     mongoose.model('data').find(function(err, data){
         res.send(data);
@@ -71,6 +72,7 @@ datastuff.save(function (err, datastuff) {
     if (err) return console.error(err);
     datastuff.speak();
 });
+
 
 
 app.get('/data', function(req, res){
