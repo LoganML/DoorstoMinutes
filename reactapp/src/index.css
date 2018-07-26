@@ -20,3 +20,16 @@ body, html {
   background-size: cover;
   opacity: .75;
 }
+.heading {  
+  color: black;
+  text-align: center;
+  text-shadow: 1px 3px white;
+  background-color: rgb(24, 238, 49);
+  padding-left: 40px;
+};
+Table {
+  padding-left: 30px;
+}
+.week1 {
+  padding-top: 20px;
+}
