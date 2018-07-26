@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-
-import theme from '@instructure/ui-themes/lib/canvas';
-
+import theme from "@instructure/ui-themes/lib/canvas";
 import Table from "@instructure/ui-elements/lib/components/Table";
-
 import Heading from "@instructure/ui-elements/lib/components/Heading";
 import Progress from "@instructure/ui-elements/lib/components/Progress";
 import Text from "@instructure/ui-elements/lib/components/Text";
@@ -11,12 +8,10 @@ import Button from "@instructure/ui-buttons/lib/components/Button";
 import './Tables.css';
 
 
-
 class Table1 extends Component {
     constructor(props) {
       super(props);
       this.state = {
-
         //Monday
         valuenowmonint: 0,
         valuenowmonsf: 0,
@@ -44,7 +39,7 @@ class Table1 extends Component {
         valuenowfric: 0,
         show: true
       };
-    
+    }
     //Monday
     IncrementItemMonInt = () => {
       if (this.state.valuenowmonint < 60)
