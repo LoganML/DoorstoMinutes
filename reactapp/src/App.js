@@ -1,15 +1,20 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import Table from "./components/Tables/Tables.js";
+
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import Table1 from "./components/Tables/Tables";
+
 ;
 
 const App = () => (
-  <Router>
+  
     <div>
-      <Route exact path="/table" component={Table} />
-     
+
+      {/* <h1>Work</h1> */}
+        <Table1 />
+
+
     </div>
-  </Router>
+
 );
 
 

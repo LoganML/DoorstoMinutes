@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
-import theme from "@instructure/ui-themes/lib/canvas";
+import theme from '@instructure/ui-themes/lib/canvas';
+
 import Table from "@instructure/ui-elements/lib/components/Table";
 
 import Heading from "@instructure/ui-elements/lib/components/Heading";
@@ -12,10 +13,10 @@ import Button from "@instructure/ui-buttons/lib/components/Button";
 theme.use()
 
 
-class Table extends Component {
-    constructor(props) {
-      super(props);
-      this.state = {
+
+class Table1 extends Component {
+
+      state = {
         //Monday
         valuenowmonint: 0,
         valuenowmonsf: 0,
@@ -43,7 +44,7 @@ class Table extends Component {
         valuenowfric: 0,
         show: true
       };
-    }
+    
     //Monday
     IncrementItemMonInt = () => {
       if (this.state.valuenowmonint < 60)
@@ -1241,4 +1242,4 @@ class Table extends Component {
     }
   }
   
-  export default Table;
+  export default Table1;
