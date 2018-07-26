@@ -14,11 +14,13 @@
     "client": "cd reactapp && yarn start",
     "server": "nodemon server.js",
     "dev": " concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
-
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@instructure/ui-elements": "^5.20.1",
+    "@instructure/ui-themeable": "^5.20.1",
+    "@instructure/ui-themes": "^5.20.1",
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "dotenv": "^6.0.0",

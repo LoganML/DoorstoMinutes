@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
+
 import theme from "@instructure/ui-themes/lib/canvas";
 import Table from "@instructure/ui-elements/lib/components/Table";
+
 import Heading from "@instructure/ui-elements/lib/components/Heading";
 import Progress from "@instructure/ui-elements/lib/components/Progress";
 import Text from "@instructure/ui-elements/lib/components/Text";
 import Button from "@instructure/ui-buttons/lib/components/Button";
 
 
+theme.use()
 
 
 class Table extends Component {
