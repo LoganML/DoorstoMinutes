@@ -10,7 +10,11 @@
     "@instructure/ui-elements": "^5.19.0",
     "@instructure/ui-forms": "^5.19.0",
     "@instructure/ui-themeable": "^5.19.0",
-    "@instructure/ui-themes": "^5.19.0"
+    "@instructure/ui-themes": "^5.19.0",
+    "client": "cd reactapp && yarn start",
+    "server": "nodemon server.js",
+    "dev": " concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+
   },
   "author": "",
   "license": "ISC",
@@ -23,5 +27,8 @@
     "morgan": "^1.9.0",
     "path": "^0.12.7",
     "request": "^2.87.0"
+  },
+  "devDependencies": {
+    "concurrently": "^3.6.1"
   }
 }

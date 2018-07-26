@@ -19,8 +19,14 @@ app.use(express.static("./public"));
 
 // getting-started.js
 var mongoose = require('mongoose');
-mongoose.connect(process.env.mongodb);
+mongoose.connect(process.env.mongodb, {useNewUrlParser: true});
 
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function(){
+    console.log('connected to DB!')
+})
+mongoose.Promise = Promise;
 //new
 mongoose.model('data', {String});
 
@@ -31,16 +37,7 @@ app.get('/data', function(req, res){
         res.send(data);
     })
 })
-// function insertData(myObject) {
-//     db.names.insert(myObject)
-// }
 
-// function getDataBack() {
-//     var cursor = db.names.find();
-//     while (cursor.hasNext()) {
-//         printjson(cursor.next());
-//     }
-// }
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
@@ -48,30 +45,6 @@ db.once('open', function () {
     // we're connected!
 });
 
-const schema = require("./schema.js")
-
-var Data = mongoose.model('data', schema);
-
-var silence = new Data({ name: 'Silence' });
-console.log(silence.name); // 'Silence'
-
-// NOTE: methods must be added to the schema before compiling it with mongoose.model()
-dataSchema.methods.speak = function () {
-    var input = this.name
-        ? "blank" + this.name
-        : "add stuff here";
-    console.log(input);
-}
-
-var Data = mongoose.model('Data', dataSchema);
-
-var datastuff = new Data({ name: 'stuff' });
-datastuff.speak(); // "blank add stuff here stuff"
-
-datastuff.save(function (err, datastuff) {
-    if (err) return console.error(err);
-    datastuff.speak();
-});
 
 
 
