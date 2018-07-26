@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from 'react';
 import theme from "@instructure/ui-themes/lib/canvas";
 import Table from "@instructure/ui-elements/lib/components/Table";
 import Heading from "@instructure/ui-elements/lib/components/Heading";
